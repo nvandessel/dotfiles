@@ -1,0 +1,28 @@
+[user]
+	name = Nic van Dessel
+	email = 51134175+nvandessel@users.noreply.github.com
+	signingkey = 88AE94AD8B681486
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+    s = status -s
+    lg = log --oneline --decorate --all --graph
+    d = diff --stat
+    tags = for-each-ref --sort=taggerdate --format '%(refname) %(taggerdate)' refs/tags
+    diff = diff --color-moved
+    branch-name = "!git rev-parse --abbrev-ref HEAD"
+    update = "!git fetch origin && git merge origin/master"
+    temp = "!branch=$(git branch-name) && git checkout origin/master && git checkout -b $branch-temp"
+    merge-squash = "!git merge --no-commit --squash $(git branch-name | sed -e 's/-temp$//') && git reset && git commit -a"
+    replace = "!branch=$(git branch-name) && git branch -D ($branch | sed -e 's/-temp$') && git checkout -b ($branch | sed -e 's/-temp$') && git branch -D $branch"
+    force-update = "!branch=$(git branch-name) && git push -f origin $branch"
+    squash = "!git update && git temp && git merge-squash && git replace && git force-update"
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[core]
+	editor = nvim
