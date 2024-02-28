@@ -1,11 +1,26 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 
-require("lspconfig").lua_ls.setup {}
-require("lspconfig").rust_analyzer.setup {}
-require("lspconfig").marksman.setup {}
-require("lspconfig").dockerls.setup {}
-require("lspconfig").csharp_ls.setup {}
-require("lspconfig").yamlls.setup {}
-require("lspconfig").tsserver.setup {}
-require("lspconfig").bashls.setup {}
+local on_attach = require("plugins.configs.lspconfig").on_attach
+local capabilities = require("plugins.configs.lspconfig").capabilities
+local lspconfig = require("lspconfig")
+
+local servers = {
+    "lua_ls",
+    "rust_analyzer",
+    "marksman",
+    "dockerls",
+    "csharp_ls",
+    "yamlls",
+    "tsserver",
+    "bashls"
+}
+
+for _, lsp in ipairs(servers) do
+    lspconfig[lsp].setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        single_file_support = true,
+    })
+end
+
