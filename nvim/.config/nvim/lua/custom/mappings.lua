@@ -14,6 +14,7 @@ M.general = {
         ["<C-u>"] = { "<C-u>zz", opts = {} },
         ["n"] = { "nzzzv", opts = {} },
         ["N"] = { "Nzzzv", opts = {} },
+        ["<leader>gs"] = { "<cmd>Git<CR>", opts = {} },
     },
     v = {
         ["J"] = { ":m '>+1<CR>gv=gv", opts = { noremap = true, silent = true } },

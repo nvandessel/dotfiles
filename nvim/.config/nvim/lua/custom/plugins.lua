@@ -33,6 +33,11 @@ local plugins = {
             require("custom.configs.lspconfig")
         end
     },
+    {
+        "tpope/vim-fugitive",
+        event = "VeryLazy",
+        cmd = {"Git"},
+    },
 }
 
 return plugins;
