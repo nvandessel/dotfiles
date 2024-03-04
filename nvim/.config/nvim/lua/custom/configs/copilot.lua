@@ -7,7 +7,7 @@ local options = {
       jump_next = "]]",
       accept = "<CR>",
       refresh = "gr",
-      open = "<M-CR>"
+      open = "<M-l>"
     },
     layout = {
       position = "bottom", -- | top | left | right
@@ -19,7 +19,7 @@ local options = {
     auto_trigger = true,
     debounce = 75,
     keymap = {
-      accept = "<M-l>",
+      accept = "<M-CR>",
       accept_word = false,
       accept_line = "<C-j>",
       next = "<M-]>",
