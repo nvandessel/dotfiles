@@ -23,9 +23,6 @@ local plugins = {
         end
     },
     {
-        "williamboman/mason.nvim",
-    },
-    {
         "williamboman/mason-lspconfig.nvim",
     },
     {
