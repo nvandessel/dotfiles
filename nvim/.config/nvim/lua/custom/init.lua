@@ -1,4 +1,4 @@
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"
 
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
@@ -15,3 +15,5 @@ vim.opt.incsearch = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
+
+vim.opt.relativenumber = true
