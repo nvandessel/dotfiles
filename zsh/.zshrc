@@ -92,9 +92,12 @@ plugins=(
     docker-compose
     adb
     npm
+    aws
 )
 
 source $ZSH/oh-my-zsh.sh
+
+source /Users/nicvandessel/Repos/infra-developer-tools/db-utils.bash
 
 # User configuration
 
