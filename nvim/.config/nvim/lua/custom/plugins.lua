@@ -47,6 +47,13 @@ local plugins = {
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     },
+    {
+        "rust-lang/rust.vim",
+        ft = "rust",
+        init = function ()
+            vim.g.rustfmt_autosave = 1
+        end
+    },
 }
 
 return plugins;
