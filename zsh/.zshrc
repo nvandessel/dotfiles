@@ -104,6 +104,8 @@ source /Users/nicvandessel/Repos/infra-developer-tools/db-utils.bash
 # export MANPATH="/usr/local/man:$MANPATH"
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -136,3 +138,6 @@ bindkey -v
 
 # Kills delay when entering vi mode
 export KEYTIMEOUT=1
+
+# Set up lazygit
+CONFIG_DIR="$HOME/.config/lazygit"

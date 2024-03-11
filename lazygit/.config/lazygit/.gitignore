@@ -1,0 +1,2 @@
+# Don't include local state file in git
+state.yml
