@@ -6,14 +6,19 @@ M.disabled = {
 
 M.general = {
     n = {
+        -- Tmux navigation
         ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
         ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
         ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
         ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
+
+        -- Keep cursor centered when scrolling
         ["<C-d>"] = { "<C-d>zz", opts = {} },
         ["<C-u>"] = { "<C-u>zz", opts = {} },
         ["n"] = { "nzzzv", opts = {} },
         ["N"] = { "Nzzzv", opts = {} },
+
+        -- Fugitive
         ["<leader>gs"] = { "<cmd>Git<CR>", opts = {} },
     },
     v = {

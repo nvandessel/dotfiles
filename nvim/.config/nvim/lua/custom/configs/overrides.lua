@@ -26,7 +26,6 @@ M.treesitter = {
         "regex",
         "rust",
         "sql",
-        "tmux",
         "toml",
         "typescript",
         "xml",
