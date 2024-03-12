@@ -1,0 +1,72 @@
+<keymap version="1" name="nvim" parent="Visual Assist OSX">
+  <action id="ActivateProjectToolWindow">
+    <keyboard-shortcut first-keystroke="shift space" second-keystroke="e" />
+  </action>
+  <action id="ActivateTerminalToolWindow">
+    <keyboard-shortcut first-keystroke="shift space" second-keystroke="h" />
+  </action>
+  <action id="ChangesView.Move" />
+  <action id="CloseContent">
+    <keyboard-shortcut first-keystroke="meta w" />
+  </action>
+  <action id="CollapsiblePanel-toggle" />
+  <action id="Console.TableResult.ColumnVisibility" />
+  <action id="Console.TableResult.SelectRow" />
+  <action id="EditorDeleteLine" />
+  <action id="EditorLeft">
+    <keyboard-shortcut first-keystroke="left" />
+  </action>
+  <action id="EditorScrollToCenter" />
+  <action id="FindSelectionInPath">
+    <keyboard-shortcut first-keystroke="space" second-keystroke="f" />
+  </action>
+  <action id="GotoAction" />
+  <action id="HTTPClient.PreviewHtml.NavigateBack">
+    <keyboard-shortcut first-keystroke="left" />
+  </action>
+  <action id="Jdbc.OpenConsole.New" />
+  <action id="Jdbc.OpenConsole.New.Generate" />
+  <action id="List-selectPreviousColumn">
+    <keyboard-shortcut first-keystroke="left" />
+  </action>
+  <action id="MaximizeToolWindow">
+    <keyboard-shortcut first-keystroke="ctrl b" second-keystroke="z" />
+  </action>
+  <action id="MoveStatementDown">
+    <keyboard-shortcut first-keystroke="shift j" />
+  </action>
+  <action id="MoveStatementUp">
+    <keyboard-shortcut first-keystroke="shift k" />
+  </action>
+  <action id="NavBar-selectLeft">
+    <keyboard-shortcut first-keystroke="left" />
+  </action>
+  <action id="NextSplitter">
+    <keyboard-shortcut first-keystroke="alt tab" />
+    <keyboard-shortcut first-keystroke="ctrl l" />
+  </action>
+  <action id="NextTab">
+    <keyboard-shortcut first-keystroke="shift meta close_bracket" />
+  </action>
+  <action id="PrevSplitter">
+    <keyboard-shortcut first-keystroke="shift alt tab" />
+    <keyboard-shortcut first-keystroke="ctrl h" />
+  </action>
+  <action id="PreviousTab">
+    <keyboard-shortcut first-keystroke="shift meta open_bracket" />
+  </action>
+  <action id="QuickPreview" />
+  <action id="SegmentedButton-left">
+    <keyboard-shortcut first-keystroke="left" />
+  </action>
+  <action id="SplitChooser.SplitCenter" />
+  <action id="SplitChooser.SplitLeft">
+    <keyboard-shortcut first-keystroke="left" />
+  </action>
+  <action id="Tree-selectParent">
+    <keyboard-shortcut first-keystroke="left" />
+  </action>
+  <action id="Vcs.MoveChangedLinesToChangelist" />
+  <action id="Vcs.ShowMessageHistory" />
+  <action id="copilot.disposeInlays" />
+</keymap>

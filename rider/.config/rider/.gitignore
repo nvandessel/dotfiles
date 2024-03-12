@@ -1,0 +1,24 @@
+# Ignore everything
+*
+
+# Capture gitignore
+!.gitignore
+
+# Capture keymaps
+!keymaps/
+!keymaps/**
+
+# Capture options
+!options/
+!options/mac/keymap.xml
+!options/aeInstalledPlugins.xml
+!options/colors.scheme.xml
+!options/editor.xml
+!options/ide.general.xml
+!options/keymapFlags.xml
+!options/vim_settings.xml
+
+# Capture codestyles
+!codestyles/
+!codestyles/**
+

@@ -1,0 +1,12 @@
+<application>
+  <component name="aeInstalledPlugins">
+    <option name="myPlugins">
+      <map>
+        <entry key="cognitivecomplexity-rider" value="1710261055287" />
+        <entry key="com.github.catppuccin.jetbrains" value="1710261155084" />
+        <entry key="mobi.hsz.idea.gitignore" value="1710261076624" />
+        <entry key="some.awesome" value="1710261024051" />
+      </map>
+    </option>
+  </component>
+</application>

@@ -1,0 +1,18 @@
+<application>
+  <component name="KeymapFlagsStorage">
+    <option name="keymapToDescriptor">
+      <map>
+        <entry key="Visual Assist (macOS) copy">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="nvim">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>
