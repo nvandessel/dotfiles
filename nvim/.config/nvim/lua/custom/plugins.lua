@@ -1,6 +1,8 @@
 local o = require("custom.configs.overrides")
 
 local plugins = {
+
+    -- Navigation
     {
         "christoomey/vim-tmux-navigator",
         lazy = false,
@@ -12,16 +14,8 @@ local plugins = {
             "TmuxNavigatePrevious",
         }
     },
-    {
-        "zbirenbaum/copilot.lua",
-        lazy = false,
-        opts = function ()
-            return require "custom.configs.copilot"
-        end,
-        config = function (_, opts)
-            require("copilot").setup(opts)
-        end
-    },
+
+    -- Lsp
     {
         "williamboman/mason-lspconfig.nvim",
     },
@@ -31,15 +25,6 @@ local plugins = {
             require("plugins.configs.lspconfig")
             require("custom.configs.lspconfig")
         end
-    },
-    {
-        "tpope/vim-fugitive",
-        event = "VeryLazy",
-        cmd = {"Git"},
-    },
-    {
-        "nvim-tree/nvim-tree.lua",
-        opts = o.nvimtree,
     },
     {
         "iamcco/markdown-preview.nvim",
@@ -52,6 +37,35 @@ local plugins = {
         ft = "rust",
         init = function ()
             vim.g.rustfmt_autosave = 1
+        end
+    },
+
+    -- Git
+    {
+        "tpope/vim-fugitive",
+        event = "VeryLazy",
+        cmd = {"Git"},
+    },
+
+    -- File management
+    {
+        "nvim-tree/nvim-tree.lua",
+        opts = o.nvimtree,
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        opts = o.treesitter,
+    },
+
+    -- AI
+    {
+        "zbirenbaum/copilot.lua",
+        lazy = false,
+        opts = function ()
+            return require "custom.configs.copilot"
+        end,
+        config = function (_, opts)
+            require("copilot").setup(opts)
         end
     },
     {
