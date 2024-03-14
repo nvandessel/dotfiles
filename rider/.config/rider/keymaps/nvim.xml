@@ -68,5 +68,9 @@
   </action>
   <action id="Vcs.MoveChangedLinesToChangelist" />
   <action id="Vcs.ShowMessageHistory" />
+  <action id="ZoomCurrentWindow">
+    <keyboard-shortcut first-keystroke="ctrl meta equals" />
+    <keyboard-shortcut first-keystroke="shift space" second-keystroke="z" />
+  </action>
   <action id="copilot.disposeInlays" />
 </keymap>
