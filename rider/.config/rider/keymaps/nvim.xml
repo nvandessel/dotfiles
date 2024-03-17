@@ -1,6 +1,10 @@
 <keymap version="1" name="nvim" parent="Visual Assist OSX">
-  <action id="ActivateProjectToolWindow">
-    <keyboard-shortcut first-keystroke="shift space" second-keystroke="e" />
+  <action id="ActivateNuGetToolWindow">
+    <keyboard-shortcut first-keystroke="shift meta 7" />
+  </action>
+  <action id="ActivateProjectToolWindow" />
+  <action id="ActivateTODOToolWindow">
+    <keyboard-shortcut first-keystroke="meta 7" />
   </action>
   <action id="ActivateTerminalToolWindow">
     <keyboard-shortcut first-keystroke="shift space" second-keystroke="h" />
@@ -13,10 +17,16 @@
   <action id="Console.TableResult.ColumnVisibility" />
   <action id="Console.TableResult.SelectRow" />
   <action id="EditorDeleteLine" />
+  <action id="EditorDown">
+    <keyboard-shortcut first-keystroke="down" />
+  </action>
   <action id="EditorLeft">
     <keyboard-shortcut first-keystroke="left" />
   </action>
   <action id="EditorScrollToCenter" />
+  <action id="EditorUp">
+    <keyboard-shortcut first-keystroke="up" />
+  </action>
   <action id="FindSelectionInPath">
     <keyboard-shortcut first-keystroke="space" second-keystroke="f" />
   </action>

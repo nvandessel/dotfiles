@@ -1,0 +1,11 @@
+let mapLeader = " "
+nmap <space> <Leader>
+
+set scrolloff=5
+
+map <leader>e <Action>(ActivateProjectToolWindow)
+map <C-n> <Action>(HideActiveWindow)
+
+map <leader>h <Action>(ActivateTerminalToolWindow)
+
+map <leader>fa <Action>(SearchEverywhere)
