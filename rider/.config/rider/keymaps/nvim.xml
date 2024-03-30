@@ -42,12 +42,8 @@
   <action id="MaximizeToolWindow">
     <keyboard-shortcut first-keystroke="ctrl b" second-keystroke="z" />
   </action>
-  <action id="MoveStatementDown">
-    <keyboard-shortcut first-keystroke="shift j" />
-  </action>
-  <action id="MoveStatementUp">
-    <keyboard-shortcut first-keystroke="shift k" />
-  </action>
+  <action id="MoveStatementDown" />
+  <action id="MoveStatementUp" />
   <action id="NavBar-selectLeft">
     <keyboard-shortcut first-keystroke="left" />
   </action>
@@ -72,6 +68,9 @@
   <action id="SplitChooser.SplitCenter" />
   <action id="SplitChooser.SplitLeft">
     <keyboard-shortcut first-keystroke="left" />
+  </action>
+  <action id="StepInto">
+    <keyboard-shortcut first-keystroke="f11" />
   </action>
   <action id="Tree-selectParent">
     <keyboard-shortcut first-keystroke="left" />

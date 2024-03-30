@@ -1,11 +1,38 @@
 let mapLeader = " "
 nmap <space> <Leader>
 
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+""" My Mappings -----------------------------
+set number relativenumber
 set scrolloff=5
 
-map <leader>e <Action>(ActivateProjectToolWindow)
 map <C-n> <Action>(HideActiveWindow)
-
+map <leader>e <Action>(ActivateProjectToolWindow)
 map <leader>h <Action>(ActivateTerminalToolWindow)
+map <leader>z <Action>(ToggleDistractionFreeMode)
 
 map <leader>fa <Action>(SearchEverywhere)
+map <leader>o <Action>(FileStructurePopup)
+
+map <leader>d <Action>(Debug)
+map <leader>c <Action>(Stop)
+map <leader>b <Action>(ToggleLineBreakpoint)
+
+map <leader>\ <Action>(MoveTabRight)
+map <leader>[ <Action>(MoveEditorToOppositeTabGroup)
+map <leader>] <Action>(MoveEditorToOppositeTabGroup)
+
+map <S-J> <Action>(MoveLineDown)
+map <S-K> <Action>(MoveLineUp)
+
+map gf <Action>(ReSharperGotoImplementation)
+
+map <C-d> <C-d>zz
+map <C-u> <C-u>zz
+nmap n nzzzv
+nmap N Nzzzv
