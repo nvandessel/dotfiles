@@ -4,10 +4,13 @@ Home to my custom configurations.
 
 The provided Makefile clones the [NVChad](https://github.com/NvChad/NvChad)
 Neovim config, then uses [GNU Stow](https://www.gnu.org/software/stow/) to
-setup all the symlinks for the various dotfiles.
+setup all the symlinks for the various dotfiles. GNU Stow ships with Ubuntu.
 
 ### Prerequisites
 
+<details>
+  <summary>MacOS</summary>
+  
 - Install stow
 ```
 brew install stow
@@ -17,6 +20,31 @@ brew install stow
 brew install tmux
 ```
 
+</details>
+
+<details>
+  <summary>Windows</summary>
+  
+I'm setting this up using WSL2 and Ubuntu.
+This means you will need to get WSL and a Linux distro setup, then essentially follow the Linux instructions.
+
+
+</details>
+
+<details>
+  <summary>Linux (Ubuntu)</summary>
+- GNU Stow ships with Ubuntu.
+- [Install Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux) (NVChad requires Neovim 0.10)
+```
+sudo apt install neovim
+```
+- Install tmux
+```
+sudo apt install tmux
+
+```
+
+</details>
 Optional but recommended:
 - Use a [Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 
