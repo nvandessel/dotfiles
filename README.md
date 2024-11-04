@@ -33,6 +33,7 @@ This means you will need to get WSL and a Linux distro setup, then essentially f
 
 <details>
   <summary>Linux (Ubuntu)</summary>
+  
 - GNU Stow ships with Ubuntu.
 - [Install Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux) (NVChad requires Neovim 0.10)
 ```
@@ -41,10 +42,10 @@ sudo apt install neovim
 - Install tmux
 ```
 sudo apt install tmux
-
 ```
 
 </details>
+
 Optional but recommended:
 - Use a [Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 
