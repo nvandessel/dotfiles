@@ -35,9 +35,11 @@ This means you will need to get WSL and a Linux distro setup, then essentially f
   <summary>Linux (Ubuntu)</summary>
   
 - GNU Stow ships with Ubuntu.
-- [Install Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux) (NVChad requires Neovim 0.10)
+- [Install Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux) (NVChad requires Neovim 0.10, so we will use the unstable repository)
 ```
-sudo apt install neovim
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install neovim
 ```
 - Install tmux
 ```
