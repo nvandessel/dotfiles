@@ -33,17 +33,52 @@ This means you will need to get WSL and a Linux distro setup, then essentially f
 
 <details>
   <summary>Linux (Ubuntu)</summary>
-  
-- GNU Stow ships with Ubuntu.
+
+*From fresh?*
+- Get missing packages
+```
+sudo apt-get upgrade
+sudo apt-get install build-essential
+```
+- Set up zsh
+```
+sudo apt install zsh
+chsh -s $(which zsh)
+exit
+```
+- [Install Oh-My-Zsh](https://ohmyz.sh/#install)
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+- Set up nodejs and npm
+```
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+```
+- Set up zip and unzip
+```
+sudo apt-get install zip unzip
+```
+
+*From existing setup*
+- Install GNU Stow
+```
+sudo apt install stow
+```
+- Install tmux
+```
+sudo apt install tmux
+```
+- Install Make
+```
+sudo apt install make
+```
 - [Install Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux) (NVChad requires Neovim 0.10, so we will use the unstable repository)
 ```
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install neovim
-```
-- Install tmux
-```
-sudo apt install tmux
 ```
 
 </details>
