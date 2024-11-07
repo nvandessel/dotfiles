@@ -1,0 +1,5 @@
+!regolith.look.path: /usr/share/regolith-look/default
+regolith.look.path: /usr/share/regolith-look/lascaille
+regolith.wallpaper.file: /usr/share/backgrounds/violet_simple.jpg
+
+wm.gaps.inner.size: 20
