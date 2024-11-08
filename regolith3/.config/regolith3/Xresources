@@ -1,4 +1,5 @@
-!regolith.look.path: /usr/share/regolith-look/default
+wm.bar.status_config: ~/.config/regolith3/i3status-rust/config.toml
+
 regolith.look.path: /usr/share/regolith-look/lascaille
 regolith.wallpaper.file: /usr/share/backgrounds/violet_simple.jpg
 
