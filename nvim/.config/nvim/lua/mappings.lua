@@ -1,3 +1,5 @@
+require "nvchad.mappings"
+
 local M = {}
 
 M.disabled = {
