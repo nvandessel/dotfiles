@@ -10,7 +10,8 @@ local servers = {
     "dockerls",
     "csharp_ls",
     "yamlls",
-    "bashls"
+    "bashls",
+    "zls"
 }
 
 for _, lsp in ipairs(servers) do

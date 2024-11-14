@@ -30,6 +30,7 @@ M.treesitter = {
         "typescript",
         "xml",
         "yaml",
+        "zig"
     },
     highlight = {
         enable = true,

@@ -20,10 +20,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
-
 export XDG_CONFIG_HOME="$HOME/.config"
+export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$PATH:$HOME/.zig/"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -41,6 +41,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Aliases
 alias vim="nvim"
 alias vi="nvim"
+alias lg="lazygit"
 
 # Enter vi mode with Esc
 bindkey -v
