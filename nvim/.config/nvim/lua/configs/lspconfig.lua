@@ -1,25 +1,22 @@
-local nvlsp = require "nvchad.configs.lspconfig"
-local lspconfig = require "lspconfig"
-
-nvlsp.defaults()
+local config = require "nvchad.configs.lspconfig"
 
 local servers = {
-    "lua_ls",
-    "rust_analyzer",
-    "marksman",
-    "dockerls",
-    "csharp_ls",
-    "yamlls",
-    "bashls",
-    "zls"
+    lua_ls = {},
+    rust_analyzer = {},
+    marksman = {},
+    dockerls = {},
+    csharp_ls = {},
+    yamlls = {},
+    bashls = {},
+    zls = {}
 }
 
-for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup({
-        on_attach = nvlsp.on_attach,
-        on_init = nvlsp.on_init,
-        capabilities = nvlsp.capabilities,
-        single_file_support = true,
-    })
+for name, opts in pairs(servers) do
+    opts.on_init = config.on_init
+    opts.on_attach = config.on_attach
+    opts.capabilities = config.capabilities
+    opts.single_file_support = true
+
+    require("lspconfig")[name].setup(opts)
 end
 

@@ -1,8 +1,10 @@
----@type ChadrcConfig
 local M = {}
 
-M.ui = {
+M.base46 = {
     theme = 'catppuccin',
+}
+
+M.ui = {
     telescope = {
         style = "bordered",
     },

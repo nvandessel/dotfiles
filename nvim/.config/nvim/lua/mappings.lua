@@ -1,35 +1,23 @@
 require "nvchad.mappings"
 
-local M = {}
+local map = vim.keymap.set
 
-M.disabled = {
-    ["<S-K>"] = "",
-}
+-- Tmux navigation
+map("n", "<C-h>","<cmd> TmuxNavigateLeft<CR>", {desc = "window left"})
+map("n", "<C-l>","<cmd> TmuxNavigateRight<CR>", {desc = "window right"})
+map("n", "<C-j>","<cmd> TmuxNavigateDown<CR>", {desc = "window down"})
+map("n", "<C-k>","<cmd> TmuxNavigateUp<CR>", {desc = "window up"})
 
-M.general = {
-    n = {
-        -- Tmux navigation
-        ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
-        ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
-        ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
-        ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
+-- Keep cursor centered when scrolling
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
 
-        -- Keep cursor centered when scrolling
-        ["<C-d>"] = { "<C-d>zz", opts = {} },
-        ["<C-u>"] = { "<C-u>zz", opts = {} },
-        ["n"] = { "nzzzv", opts = {} },
-        ["N"] = { "Nzzzv", opts = {} },
+-- Fugitive
+map("n", "<leader>gs", "<cmd>Git<CR>")
 
-        -- Fugitive
-        ["<leader>gs"] = { "<cmd>Git<CR>", opts = {} },
-    },
-    v = {
-        ["J"] = { ":m '>+1<CR>gv=gv", opts = { noremap = true, silent = true } },
-        ["K"] = { ":m '<-2<CR>gv=gv", opts = { noremap = true, silent = true } },
-    },
-    x = {
-        ["<leader>p"] = { [["_dP]], opts = {} },
-    }
-}
+-- Move Selection
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
 
-return M;
