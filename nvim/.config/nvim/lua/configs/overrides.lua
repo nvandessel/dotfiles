@@ -3,6 +3,7 @@ local M = {}
 M.nvimtree = {
     git = {
         enable = true,
+
     },
 
     renderer = {
@@ -19,6 +20,7 @@ M.treesitter = {
     ensure_installed = {
         "bash",
         "c_sharp",
+        "markdown",
         "dockerfile",
         "javascript",
         "json",
@@ -35,6 +37,9 @@ M.treesitter = {
     highlight = {
         enable = true,
     },
+    indent = {
+        enable = true,
+    }
 }
 
 return M
