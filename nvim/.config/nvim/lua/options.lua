@@ -21,3 +21,5 @@ o.scrolloff = 8
 o.signcolumn = "yes"
 
 o.relativenumber = true
+
+o.conceallevel = 2
