@@ -54,4 +54,22 @@ M.telescope = {
     },
 }
 
+M.obsidian = {
+    workspaces = {
+        {
+            name = "Work",
+            path = "~/Notes/Work",
+        },
+    },
+
+    daily_notes = {
+        folder = "Daily",
+        template = "Daily Template.md",
+    },
+
+    templates = {
+        folder = "Templates",
+    }
+}
+
 return M
