@@ -16,8 +16,13 @@ map("n", "N", "Nzzzv")
 
 -- Fugitive
 map("n", "<leader>gs", "<cmd>Git<CR>")
+--
+-- LazyGit
+map("n", "<leader>lg", "<cmd>LazyGit<CR>")
 
 -- Move Selection
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Telescope undo
+map("n", "<leader>u", "<cmd>Telescope undo<cr>", {desc =  "undo history"})
