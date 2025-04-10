@@ -10,8 +10,13 @@ tpm:
 nvchad:
 	git clone https://github.com/NvChad/starter ~/.config/nvim --depth 1 || true
 
-install: nvchad tpm pure
+install: nvchad tpm pure stow-only
+
+stow-only:
 	for d in `find . -mindepth 1 -maxdepth 1 -type d -not -path './.*'`; do \
 		stow -t $(HOME) -R $$(basename $$d); \
 		echo "$$(basename $$d) stowed."; \
 	done
+
+.PHONY: stow
+stow: stow-only
