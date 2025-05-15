@@ -8,7 +8,9 @@ local servers = {
     csharp_ls = {},
     yamlls = {},
     bashls = {},
-    zls = {}
+    zls = {},
+    ts_ls = {},
+    gh_actions_ls = {},
 }
 
 for name, opts in pairs(servers) do

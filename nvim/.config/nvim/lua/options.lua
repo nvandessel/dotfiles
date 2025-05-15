@@ -14,7 +14,7 @@ o.wrap = false
 
 o.swapfile = false
 
-o.hlsearch = false
+o.hlsearch = true
 o.incsearch = true
 
 o.scrolloff = 8
