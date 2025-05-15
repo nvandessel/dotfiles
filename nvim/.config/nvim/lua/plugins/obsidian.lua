@@ -16,9 +16,19 @@ return {
                 desc = "Go to today's daily note",
             },
             {
-                "<leader>rf",
+                "<leader>or",
                 "<cmd>ObsidianRename<cr>",
                 desc = "Rename current file",
+            },
+            {
+                "<leader>os",
+                "<cmd>ObsidianSearch<cr>",
+                desc = "Search notes",
+            },
+            {
+                "<leader>oi",
+                "<cmd>ObsidianTemplate<cr>",
+                desc = "Insert template",
             },
         },
         opts = o.obsidian,
