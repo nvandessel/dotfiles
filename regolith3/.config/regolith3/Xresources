@@ -1,10 +1,11 @@
-regolith.look.path: /usr/share/regolith-look/lascaille
+regolith.look.path: /usr/share/regolith-look/catppuccin
 regolith.wallpaper.file: /usr/share/backgrounds/violet_simple.jpg
 
+wm.bar.position: top
 wm.bar.status_config: ~/.config/regolith3/i3status-rust/config.toml
-wm.gaps.inner.size: 20
+wm.gaps.inner.size: 5
 
 wm.font: JetBrainsMono 10
 gtk.font_name: JetBrainsMono 10
-gtk.monospace_font_name: JetBrainsMono 10
-i3xrocks.value.font: JetBrainsMono 10
+
+Xft.dpi: 192
