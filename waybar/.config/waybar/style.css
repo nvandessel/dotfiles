@@ -1,0 +1,83 @@
+@import "./themes/mocha.css";
+
+* {
+  font-family: "JetBrains Mono Nerd Font", monospace;
+  font-size: 13px;
+  color: @text;
+  background-color: transparent;
+  border: none;
+}
+
+window#waybar {
+  background: @base;
+  border-bottom: 2px solid @crust;
+  padding: 0 8px;
+  opacity: 0.95;
+}
+
+#workspaces button {
+  padding: 4px 10px;
+  margin: 0 4px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: @overlay0;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#workspaces button.focused {
+  background-color: @surface1;
+  color: @text;
+}
+
+#workspaces button:hover {
+  background-color: @overlay0;
+  color: @rosewater;
+}
+
+#clock,
+#battery,
+#pulseaudio,
+#network {
+  padding: 4px 12px;
+  margin: 0 4px;
+  border-radius: 8px;
+  background-color: @surface1;
+  color: @text;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning {
+  color: @red;
+}
+
+#pulseaudio {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#pulseaudio {
+  padding: 4px 12px;
+  margin: 0 4px;
+  border-radius: 8px;
+  background-color: @surface1;
+  color: @text;
+  min-width: 100px;
+}
+
+#pulseaudio.high {
+  color: @red;
+}
+
+#pulseaudio.muted {
+  color: @maroon;
+  background-color: @surface0;
+  opacity: 0.6;
+}
+
+tooltip {
+  background: @crust;
+  color: @text;
+  border: 1px solid @surface0;
+}
