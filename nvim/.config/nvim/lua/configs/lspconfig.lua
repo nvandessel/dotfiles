@@ -11,6 +11,7 @@ local servers = {
     zls = {},
     ts_ls = {},
     gh_actions_ls = {},
+    nil_ls = {},
 }
 
 for name, opts in pairs(servers) do
