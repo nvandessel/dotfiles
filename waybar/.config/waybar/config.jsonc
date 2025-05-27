@@ -1,41 +1,76 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 34,
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "network", "battery"],
+  "height": 30,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "custom/temperature",
+    "network",
+    "battery",
+    "pulseaudio",
+    "custom/power"
+  ],
 
   "hyprland/workspaces": {
-    "on-click": "activate"
-  },
-
-  "pulseaudio": {
-      "format": "{volume}% {icon}",
-      "format-muted": "Muted ",
-      "scroll-step": 5,
-      "max-volume": 100,
-      "on-click": "pavucontrol",
-      "tooltip": true,
-      "format-icons": ["", "", ""],
-      "bar": true
-  },
-
-  "network": {
-    "format-wifi": "{essid} ",
-    "format-ethernet": "{ipaddr} ",
-    "format-disconnected": "Disconnected ⚠"
-  },
-
-  "battery": {
-    "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""],
-    "interval": 30
+    "disable-scroll": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "default": "",
+      "active": "",
+      "urgent": ""
+    }
   },
 
   "clock": {
-    "on-click": "waybar-calendar",
-    "format": "{:%A %b %d  %H:%M}",
-    "interval": 60
+    "format": "{:%a %d %b %I:%M %p}"
+  },
+
+  "cpu": {
+    "format": " {usage}%"
+  },
+
+  "memory": {
+    "format": "󰍛 {used:0.1f}G"
+  },
+
+  "custom/temperature": {
+    "format": " {}°C",
+    "exec": "sensors | awk '/Package id 0:/ {print $4}' | sed 's/+//;s/°C//'",
+    "interval": 10
+  },
+
+  "network": {
+    "format-wifi": "󰤨 {essid}",
+    "format-ethernet": "󰈁 {ipaddr}/{cidr}",
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "format-disconnected": "󰤮 Disconnected"
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"]
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 Muted",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    }
+  },
+
+  "custom/power": {
+    "format": "",
+    "on-click": "systemctl poweroff",
+    "tooltip": true,
+    "tooltip-format": "Power Off"
   }
 }

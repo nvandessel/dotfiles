@@ -1,83 +1,70 @@
 @import "./themes/mocha.css";
 
 * {
-  font-family: "JetBrains Mono Nerd Font", monospace;
-  font-size: 13px;
-  color: @text;
-  background-color: transparent;
-  border: none;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    padding: 0 8px;
 }
 
 window#waybar {
-  background: @base;
-  border-bottom: 2px solid @crust;
-  padding: 0 8px;
-  opacity: 0.95;
+    background: transparent;
+    color: @text;
 }
 
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: @base;
+    border-radius: 12px;
+    padding: 0 10px;
+    margin: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Left --- */
 #workspaces button {
-  padding: 4px 10px;
-  margin: 0 4px;
-  border-radius: 8px;
-  background-color: transparent;
-  color: @overlay0;
-  transition: background-color 0.2s, color 0.2s;
+    background: @surface1;
+    color: @overlay1;
+    border-radius: 6px;
+    margin: 2px;
+    padding: 0 6px;
+}
+#workspaces button.active {
+    background: @surface0;
+    color: @lavender;
+}
+#workspaces button.urgent {
+    background: @red;
+    color: @base;
 }
 
-#workspaces button.focused {
-  background-color: @surface1;
-  color: @text;
+/* --- Center --- */
+#clock {
+    color: @lavender;
+    font-weight: bold;
 }
 
-#workspaces button:hover {
-  background-color: @overlay0;
-  color: @rosewater;
+/* --- Right --- */
+#cpu {
+    color: @yellow;
 }
-
-#clock,
-#battery,
-#pulseaudio,
+#memory {
+    color: @mauve;
+}
+#custom-temperature {
+    color: @peach;
+}
 #network {
-  padding: 4px 12px;
-  margin: 0 4px;
-  border-radius: 8px;
-  background-color: @surface1;
-  color: @text;
+    color: @blue;
 }
-
-#battery.charging {
-  color: @green;
+#battery {
+    color: @green;
 }
-
-#battery.warning {
-  color: @red;
-}
-
 #pulseaudio {
-  transition: background-color 0.3s ease, color 0.3s ease;
+    color: @teal;
 }
-
-#pulseaudio {
-  padding: 4px 12px;
-  margin: 0 4px;
-  border-radius: 8px;
-  background-color: @surface1;
-  color: @text;
-  min-width: 100px;
-}
-
-#pulseaudio.high {
-  color: @red;
-}
-
-#pulseaudio.muted {
-  color: @maroon;
-  background-color: @surface0;
-  opacity: 0.6;
-}
-
-tooltip {
-  background: @crust;
-  color: @text;
-  border: 1px solid @surface0;
+#custom-power {
+    color: @red;
 }
