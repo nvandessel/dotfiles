@@ -1,0 +1,10 @@
+[terminal]
+vt = 1
+
+[default_session]
+command = "Hyprland"
+user = "nic"
+
+[initial_session]
+command = "Hyprland --config ~/.config/greetd/hyprland.conf"
+user = "greeter"
