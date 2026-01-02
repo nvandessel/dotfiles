@@ -1,0 +1,16 @@
+# NvChad base files (cloned at install time)
+# If git status shows untracked .lua files in nvim/, they're probably new base files - add them here
+nvim/.config/nvim/init.lua
+nvim/.config/nvim/LICENSE
+nvim/.config/nvim/README.md
+nvim/.config/nvim/lua/autocmds.lua
+nvim/.config/nvim/lua/configs/conform.lua
+nvim/.config/nvim/lua/configs/lazy.lua
+nvim/.config/nvim/lua/plugins/init.lua
+
+# Generated files
+nvim/.config/nvim/lazy-lock.json
+
+# External plugins
+tmux/.config/tmux/plugins/
+zsh/.zsh/
