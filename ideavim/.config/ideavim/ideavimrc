@@ -31,6 +31,8 @@ map <S-J> <Action>(MoveLineDown)
 map <S-K> <Action>(MoveLineUp)
 
 map gf <Action>(ReSharperGotoImplementation)
+map <leader>/ <Action>(CommentByLineComment)
+map <leader>x <Action>(CloseContent)
 
 map <C-d> <C-d>zz
 map <C-u> <C-u>zz
