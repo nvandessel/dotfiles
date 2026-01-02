@@ -18,8 +18,8 @@ for name, opts in pairs(servers) do
     opts.on_init = config.on_init
     opts.on_attach = config.on_attach
     opts.capabilities = config.capabilities
-    opts.single_file_support = true
 
-    require("lspconfig")[name].setup(opts)
+    vim.lsp.config(name, opts)
+    vim.lsp.enable(name)
 end
 
