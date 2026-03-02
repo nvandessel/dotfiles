@@ -1,7 +1,5 @@
-[user]
-	name = Nic van Dessel
-	email = 51134175+nvandessel@users.noreply.github.com
-	signingkey = 88AE94AD8B681486
+[include]
+    path = .gitconfig.local
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -20,9 +18,11 @@
     replace = "!branch=$(git branch-name) && git branch -D ($branch | sed -e 's/-temp$') && git checkout -b ($branch | sed -e 's/-temp$') && git branch -D $branch"
     force-update = "!branch=$(git branch-name) && git push -f origin $branch"
     squash = "!git update && git temp && git merge-squash && git replace && git force-update"
+[core]
+	editor = nvim
+[rebase]
+	updateRefs = true
 [commit]
 	gpgsign = true
 [gpg]
 	program = gpg
-[core]
-	editor = nvim
