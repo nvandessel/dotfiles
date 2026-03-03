@@ -18,6 +18,10 @@ plugins=(
 # Load Shell
 source $ZSH/oh-my-zsh.sh
 
+# GPG Agent (enables SSH via smartcard)
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+gpgconf --launch gpg-agent
+
 # User configuration
 
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
@@ -57,3 +61,7 @@ fpath+=($HOME/.zsh/pure/)
 autoload -U promptinit; promptinit
 zstyle :prompt:pure:git:stash show yes
 prompt pure
+export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+export PATH=$PATH:/usr/local/go/bin
