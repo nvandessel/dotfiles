@@ -19,7 +19,10 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # GPG Agent (enables SSH via smartcard)
-export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+# Only override SSH_AUTH_SOCK if not using SSH agent forwarding
+if [[ -z "$SSH_CONNECTION" ]]; then
+    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
 gpgconf --launch gpg-agent
 
 # User configuration

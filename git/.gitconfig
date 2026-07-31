@@ -25,4 +25,8 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg
+	format = ssh
+[user]
+	signingkey = /home/nic/.ssh/id_ed25519.pub
+	email = 51134175+nvandessel@users.noreply.github.com
+	name = Nic van Dessel
